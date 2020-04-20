@@ -1,0 +1,1 @@
+{"0": "affirm", "1": "chitchat", "10": "thank", "2": "deny", "3": "goodbye", "4": "greet", "5": "inform", "6": "mood_great", "7": "mood_unhappy", "8": "request_interview", "9": "select"}

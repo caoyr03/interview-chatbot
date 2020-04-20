@@ -1,0 +1,70 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - inform:
+      use_entities: []
+  - select:
+      use_entities: []
+  - request_interview
+  - chitchat
+  - thank
+
+entities:
+  - interview_topic
+  - section
+
+responses:
+  utter_greet:
+  - text: "Hey! I am you interview preparation assistant. How are you?"
+
+  utter_cheer_up:
+  - text: "How about practicing some questions for your interview?"
+
+  utter_did_that_help:
+  - text: "Will that help you?"
+
+  utter_happy:
+  - text: "Great, glad to hear that!"
+
+  utter_goodbye:
+  - text: "See you later!"
+
+  utter_noworries:
+  - text: "You are welcome!:)"
+
+  utter_default:
+  - text: "sorry, I didn't understand you, please try input something else"
+
+  utter_chitchat:
+  - text: "chitchat"
+
+  utter_ask_interview_topic:
+  - text: "Which interview topic you want to practice on, Machine Learning, Statistics, SQL or Programming?"
+  utter_ask_section:
+  - text: "Great!Please type in the section you are interested in to continue."
+  utter_give_question:
+  - text: "{question}"
+  utter_slots_values:
+    - text: "I am going to run a restaurant search using the following parameters:\n
+             - interview_topic: {interview_topic}\n
+             - section: {section}"
+
+slots:
+  interview_topic:
+    type: unfeaturized
+  section:
+    type: unfeaturized
+  answer:
+    type: unfeaturized
+
+forms:
+  - interview_form
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
